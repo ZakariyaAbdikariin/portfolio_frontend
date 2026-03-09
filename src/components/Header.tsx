@@ -2,7 +2,7 @@ import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <header className="w-full bg-gradient-to-r from-red-400 via-orange-400 to-yellow-500 text-white shadow-lg sticky top-0 z-50">
+    <header className="w-full bg-gradient-to-r from-indigo-500 via-sky-500 from-10% to-emerald-500 to-90% text-white shadow-lg sticky top-0 z-50">
       <div className="flex items-center justify-between py-6 px-6 max-w-full">
         {/* LEFT: Profile far left */}
         <div className="flex items-center gap-4">
