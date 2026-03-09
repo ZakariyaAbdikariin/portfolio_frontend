@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import Projects from "./components/Projects";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full">
+      {/* Navbar */}
+      <Header />
+
+      {/* Hero / Intro Section */}
+      <section className="w-full bg-gradient-to-r from-gray-600 via-gray-500 to-gray-400 text-white py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h1 className="text-5xl font-extrabold mb-4">
+            Hi, I'm Sakariye Abdikariin
+          </h1>
+          <p className="text-xl text-white/90">Software Developer</p>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <Projects />
     </div>
   );
-}
+};
 
 export default App;
