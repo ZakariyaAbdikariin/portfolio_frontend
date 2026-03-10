@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Projects from "./components/Projects";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
+import ZakImage from "./assets/Zak.jpg"; // adjust path based on your file structure
 
 const App: React.FC = () => {
   return (

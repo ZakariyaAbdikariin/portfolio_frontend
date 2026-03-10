@@ -8,11 +8,6 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between py-6">
           {/* LEFT: Profile */}
           <div className="flex items-center gap-4">
-            <img
-              src="https://imgproxy.attic.sh/insecure/f:webp/q:90/w:1920/plain/https://attic.sh/n1aj2r6n2jupn1htuy1ky9ldzvse"
-              alt="Profile"
-              className="w-16 h-16 rounded-full border-4 border-white shadow-lg"
-            />
             <div className="flex flex-col">
               <h1 className="text-2xl font-extrabold tracking-tight">
                 Sakariye Abdikariin

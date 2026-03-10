@@ -1,4 +1,5 @@
 import React from "react";
+import ZakImage from "../assets/Zak.jpg"; // adjust path if necessary
 
 const Profile = () => {
   return (
@@ -6,7 +7,7 @@ const Profile = () => {
       {/* Profile Header */}
       <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-10">
         <img
-          src="https://imgproxy.attic.sh/insecure/f:webp/q:90/w:1920/plain/https://attic.sh/n1aj2r6n2jupn1htuy1ky9ldzvse"
+          src={ZakImage}
           alt="Sakariye Abdikariin"
           className="w-32 h-32 rounded-full border-4 border-gray-700 shadow-lg"
         />
