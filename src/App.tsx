@@ -1,21 +1,20 @@
 import React from "react";
 import Header from "./components/Header";
-import Projects from "./components/Projects";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
-import ZakImage from "./assets/Zak.jpg"; // adjust path based on your file structure
 
 const App: React.FC = () => {
+  const profileId = 4; // replace with the ID of the profile you want to show
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      {/* Main content */}
+      {/* Main content: only the Profile page */}
       <main className="flex-grow">
-        {/* <Projects /> */}
-      
+        <Profile id={profileId} />
       </main>
-    <Profile />
+
       <Footer />
     </div>
   );
