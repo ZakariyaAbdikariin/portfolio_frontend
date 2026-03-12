@@ -1,38 +1,37 @@
 import React from "react";
+import { useSpring, animated } from "@react-spring/web";
+
+const navLinks = ["Home", "About", "Portfolio", "Contact"];
 
 const Header: React.FC = () => {
-  return (
-    <header className="w-full bg-gradient-to-r from-blue-900 via-gray-800 to-teal-700 text-white shadow-lg sticky top-0 z-50">
-      {/* Main container: centers content and adds horizontal padding */}
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between py-6">
-          {/* LEFT: Profile */}
-          <div className="flex items-center gap-4">
-            <div className="flex flex-col">
-              <h1 className="text-2xl font-extrabold tracking-tight">
-                Sakariye Abdikariin
-              </h1>
-              <h2 className="text-sm">Software Developer</h2>
-            </div>
-          </div>
+  const spring = useSpring({
+    from: { transform: "translateY(-50px)", opacity: 0 },
+    to: { transform: "translateY(0px)", opacity: 1 },
+    config: { tension: 120, friction: 14 },
+  });
 
-          {/* RIGHT: Navigation */}
-          <nav className="flex gap-6 text-lg">
-            {["Home", "CV", "Projects", "Achievements", "Hobbies"].map(
-              (link, index) => (
-                <a
-                  key={index}
-                  href={`#${link.toLowerCase()}`}
-                  className="hover:text-yellow-300 transition duration-300 ease-in-out"
-                >
-                  {link}
-                </a>
-              ),
-            )}
-          </nav>
-        </div>
-      </div>
-    </header>
+  return (
+    <animated.header
+      style={spring}
+      className="w-full bg-gray-900/90 backdrop-blur-md shadow-md fixed top-0 z-20"
+    >
+      <nav className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 className="text-2xl font-bold tracking-wide text-white">
+          Sakariye
+        </h1>
+
+        <ul className="flex gap-6">
+          {navLinks.map((link) => (
+            <li
+              key={link}
+              className="text-white cursor-pointer hover:text-yellow-400 transition"
+            >
+              {link}
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </animated.header>
   );
 };
 

@@ -1,10 +1,11 @@
-//profileApi.ts
+// profileApi.ts
 import api from "./axios";
 
 export interface UserProfile {
   id?: number;
   name: string;
   bio: string;
+  avatar?: string; // added avatar
   location: string;
   nationality: string;
   availability: string;
@@ -25,7 +26,6 @@ export interface UserProfile {
   languages: string;
   skills: string;
 }
-
 
 // GET /api/profiles/:id
 export const fetchProfileById = async (id: number): Promise<UserProfile> => {

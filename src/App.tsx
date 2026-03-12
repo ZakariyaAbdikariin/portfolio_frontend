@@ -4,17 +4,20 @@ import Profile from "./components/Profile";
 import Footer from "./components/Footer";
 
 const App: React.FC = () => {
-  const profileId = 4; // replace with the ID of the profile you want to show
+  const profileId = 4; // Replace with your backend profile ID
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-black">
+      {/* Header */}
       <Header />
 
-      {/* Main content: only the Profile page */}
-      <main className="flex-grow">
+      {/* Main Content */}
+      <main className="flex-grow pt-24">
+        {/* pt-24 adds padding-top to account for fixed header */}
         <Profile id={profileId} />
       </main>
 
+      {/* Footer */}
       <Footer />
     </div>
   );
